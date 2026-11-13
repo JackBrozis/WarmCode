@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="WarmCode — your code, your people, one shared space."
+  >
+  <meta name="theme-color" content="#090909">
+  <title>WarmCode — Build together.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./chain.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div id="scene" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="WarmCode home">
+      <span class="brand-icon">&lt;&gt;</span>
+      WarmCode<span class="orange">.</span>
+    </a>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#home" aria-current="page">Overview</a>
+      <a href="#download">Download</a>
+      <a href="#support">Support</a>
+      <a href="#credits">Credits</a>
+    </nav>
+
+    <a class="header-cta" href="#download">
+      Get the app <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="viewport" tabindex="0" aria-label="WarmCode website sections">
+    <!-- OVERVIEW -->
+    <section class="panel hero active" id="home" aria-labelledby="hero-title">
+      <div class="section-watermark" aria-hidden="true">CONNECT</div>
+
+      <div class="panel-inner hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow reveal">
+            <span class="status-dot"></span>
+            BUILT FOR THE WAY YOU BUILD
+          </div>
+
+          <h1 id="hero-title" class="reveal delay-1">
+            Great code.<br>
+            Better <span class="orange">together.</span>
+          </h1>
+
+          <p class="description reveal delay-2">
+            Your code. Your people. One shared space.
+            Create rooms, share snippets, send files, and keep the
+            conversation flowing—with Firebase-powered sign-in.
+          </p>
+
+          <div class="button-row reveal delay-3">
+            <a class="button primary" href="#download">
+              Download WarmCode <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#support">
+              Let’s talk <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="stats reveal delay-4">
+            <div>
+              <strong><span data-count="3">0</span><i>in 1</i></strong>
+              <span>Code · chat · files</span>
+            </div>
+            <div>
+              <strong><span data-count="1">0</span><i>space</i></strong>
+              <span>Bring your people</span>
+            </div>
+            <div>
+              <strong><span data-count="80">0</span><i>links</i></strong>
+              <span>Connected by design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-stage" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <span class="floating-label label-top">
+            &lt;room created /&gt;
+          </span>
+
+          <div class="logo-object">
+            <div class="logo-tiles">
+              <i style="--i:0;--x:-220px;--y:-170px;--r:-100deg"></i>
+              <i style="--i:1;--x:40px;--y:-250px;--r:120deg"></i>
+              <i style="--i:2;--x:230px;--y:-160px;--r:80deg"></i>
+              <i style="--i:3;--x:-270px;--y:20px;--r:-160deg"></i>
+              <i style="--i:4;--x:0px;--y:0px;--r:180deg"></i>
+              <i style="--i:5;--x:260px;--y:70px;--r:140deg"></i>
+              <i style="--i:6;--x:-180px;--y:240px;--r:-80deg"></i>
+              <i style="--i:7;--x:20px;--y:270px;--r:110deg"></i>
+              <i style="--i:8;--x:230px;--y:220px;--r:170deg"></i>
+            </div>
+
+            <div class="logo-face">
+              <span>&lt;&gt;</span>
+              <strong>WarmCode</strong>
+              <small>MAKE SOMETHING TOGETHER.</small>
+            </div>
+          </div>
+
+          <span class="floating-label label-bottom">
+            <span class="status-dot"></span> your next idea starts here
+          </span>
+          <span class="coordinates">WC / 001 — CONNECTED</span>
+        </div>
+      </div>
+
+      <div class="section-note">
+        <span>01 / THE IDEA</span>
+        <span>Independent software. Shared possibilities.</span>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="panel download-panel" id="download"
+      aria-labelledby="download-title">
+      <div class="section-watermark" aria-hidden="true">CREATE</div>
+
+      <div class="panel-inner download-layout">
+        <div>
+          <div class="eyebrow reveal">YOUR NEXT WORKSPACE</div>
+          <h2 id="download-title" class="reveal delay-1">
+            Less friction.<br>
+            <span class="orange">More building.</span>
+          </h2>
+
+          <p class="description reveal delay-2">
+            Take the conversation out of scattered tabs.
+            Bring your snippets, your files, and your team into WarmCode.
+          </p>
+
+          <div class="feature-list reveal delay-3">
+            <div><span>01</span> Create rooms. Bring people in.</div>
+            <div><span>02</span> Share code without losing context.</div>
+            <div><span>03</span> Keep chat and files together.</div>
+          </div>
+
+          <a
+            class="button primary download-button reveal delay-4"
+            href="./WarmCode.exe"
+            download="WarmCode.exe"
+          >
+            <span aria-hidden="true">↓</span>
+            Download for Windows
+            <span class="button-tag">.EXE</span>
+          </a>
+
+          <p class="microcopy">
+            Desktop application · Windows installer
+          </p>
+        </div>
+
+        <div class="app-window reveal delay-2"
+          aria-label="Illustrative WarmCode app preview">
+          <div class="window-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>WarmCode / launch-room</span>
+            <span class="preview-label">CONCEPT PREVIEW</span>
+          </div>
+
+          <div class="app-body">
+            <aside class="app-sidebar" aria-hidden="true">
+              <div class="app-mark">&lt;&gt;</div>
+              <span class="selected">⌘</span>
+              <span>#</span>
+              <span>↗</span>
+              <span>+</span>
+              <div class="avatar">J</div>
+            </aside>
+
+            <div class="editor">
+              <div class="editor-tab">
+                <span class="orange">JS</span> together.js
+                <span>×</span>
+              </div>
+              <div class="code-lines">
+                <div><em>01</em><span class="comment">// Good ideas need good company.</span></div>
+                <div><em>02</em><span><b>const</b> room = {</span></div>
+                <div><em>03</em><span>&nbsp; name: <mark>"the-next-big-thing"</mark>,</span></div>
+                <div><em>04</em><span>&nbsp; people: [<mark>"you"</mark>, <mark>"your team"</mark>],</span></div>
+                <div><em>05</em><span>&nbsp; possibilities: <b>Infinity</b></span></div>
+                <div><em>06</em><span>};</span></div>
+                <div><em>07</em><span>&nbsp;</span></div>
+                <div><em>08</em><span><b>await</b> room.<strong>buildSomething</strong>();</span></div>
+                <div><em>09</em><span class="typing-caret">&nbsp;</span></div>
+              </div>
+
+              <div class="chat-preview">
+                <span class="chat-avatar">J</span>
+                <div>
+                  <strong>Jack <small>just now</small></strong>
+                  <p>One room. Let’s make it happen.</p>
+                </div>
+                <span class="chat-heart">↗</span>
+              </div>
+
+              <div class="editor-status">
+                <span><i class="status-dot"></i> launch-room</span>
+                <span>JavaScript · UTF-8</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="attached-badge">
+            <span>↗</span>
+            <div>Built to bring you closer.<small>Code. Chat. Share.</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-note">
+        <span>02 / GET WARMCODE</span>
+        <span>Your next project deserves a room.</span>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="panel support-panel" id="support"
+      aria-labelledby="support-title">
+      <div class="section-watermark" aria-hidden="true">LISTEN</div>
+
+      <div class="panel-inner support-layout">
+        <div>
+          <div class="eyebrow reveal">
+            <span class="status-dot"></span> DIRECT LINE
+          </div>
+          <h2 id="support-title" class="reveal delay-1">
+            Real project.<br>
+            <span class="orange">Real support.</span>
+          </h2>
+
+          <p class="description reveal delay-2">
+            Found something broken? Have an idea?
+            Want to help look after the community?
+            Send a message directly to the creator.
+          </p>
+
+          <a class="contact-email reveal delay-3"
+            href="mailto:varlan8@gmail.com">
+            varlan8@gmail.com <span aria-hidden="true">↗</span>
+          </a>
+
+          <div class="admin-story" aria-live="polite">
+            <div class="admin-symbol">⌘</div>
+            <div>
+              <span class="eyebrow">A STRONGER LINK</span>
+              <p>
+                Good communities need good people.<br>
+                Tell us why you’d like to help.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form
+          id="support-form"
+          class="support-form reveal delay-2"
+          action="https://formsubmit.co/varlan8@gmail.com"
+          method="POST"
+        >
+          <div class="form-heading">
+            <span>START A CONVERSATION</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+
+          <label for="topic">What’s on your mind?</label>
+          <div class="select-wrap">
+            <select id="topic" name="topic" required>
+              <option value="Report a bug">Report a bug</option>
+              <option value="Administrator request">Request administrator</option>
+              <option value="Custom message">Something else</option>
+            </select>
+          </div>
+
+          <label for="email">Your email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            maxlength="254"
+            required
+          >
+
+          <div class="admin-fields" id="admin-fields" inert>
+            <div>
+              <label for="username">WarmCode username</label>
+              <input
+                id="username"
+                name="warmcode_username"
+                type="text"
+                placeholder="Your exact WarmCode username"
+                minlength="2"
+                maxlength="64"
+                autocomplete="off"
+                disabled
+              >
+              <p class="field-note">
+                Double-check your username. If it’s incorrect, I won’t
+                be able to assign administrator access. Requests are
+                reviewed manually; sending one does not grant access.
+              </p>
+            </div>
+          </div>
+
+          <label for="message">Your message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Tell us a little more..."
+            minlength="10"
+            maxlength="5000"
+            required
+          ></textarea>
+
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="WarmCode support request">
+
+          <div class="honeypot" aria-hidden="true">
+            <label>
+              Leave this empty
+              <input name="_honey" tabindex="-1" autocomplete="off">
+            </label>
+          </div>
+
+          <button class="button primary send-button" type="submit">
+            <span>Send message</span> <span aria-hidden="true">↗</span>
+          </button>
+
+          <p id="form-status" class="form-status" role="status"
+            aria-live="polite"></p>
+
+          <p class="privacy-note">
+            Your email and message are sent through FormSubmit to
+            WarmCode support. Never include passwords or private keys.
+          </p>
+        </form>
+      </div>
+
+      <div class="section-note">
+        <span>03 / WE’RE LISTENING</span>
+        <span>Every great project keeps getting better.</span>
+      </div>
+    </section>
+
+    <!-- CREDITS -->
+    <section class="panel credits-panel" id="credits"
+      aria-labelledby="credits-title">
+      <div class="section-watermark" aria-hidden="true">TOGETHER</div>
+
+      <div class="panel-inner credits-layout">
+        <div class="eyebrow reveal">THE PERSON BEHIND THE PROJECT</div>
+        <h2 id="credits-title" class="reveal delay-1">
+          Built with ambition.<br>
+          <span class="orange">Made by Jack.</span>
+        </h2>
+
+        <div class="creator reveal delay-2">
+          <div class="creator-monogram">JB</div>
+          <div>
+            <strong>Jack Brozis</strong>
+            <span>Creator & developer of WarmCode</span>
+          </div>
+          <span class="creator-arrow" aria-hidden="true">↗</span>
+        </div>
+
+        <p class="description reveal delay-3">
+          From the first line of code to the rooms you’ll build in.
+          All project credit goes to Jack Brozis.
+          Thanks for being part of what comes next.
+        </p>
+
+        <a class="button primary reveal delay-4" href="#download">
+          Join the next chapter <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="credits-signature" aria-hidden="true">
+          &lt;/&gt; WarmCode<span>.</span>
+        </div>
+      </div>
+
+      <div class="section-note">
+        <span>04 / THE CREDITS</span>
+        <span>Website theme inspiration: webloved on TikTok.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <button id="motion-toggle" class="motion-toggle"
+      type="button" aria-pressed="false">
+      Pause motion
+    </button>
+
+    <div class="scroll-instruction">
+      <span class="mouse-icon" aria-hidden="true"></span>
+      <span id="scroll-hint">SCROLL UP TO EXPLORE →</span>
+    </div>
+
+    <div class="page-meter">
+      <span id="page-number">01</span>
+      <div class="meter-track"><i id="meter-fill"></i></div>
+      <span class="muted">04</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./cursor.js"></script>
+  <script type="module" src="./chain.js"></script>
+</body>
+</html>
